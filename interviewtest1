@@ -1,0 +1,23 @@
+def countStickers(text):
+    logo = "cisco"
+    test = {}
+    for x in logo:
+        test[x]=0
+    print(test)
+    
+    for x in text:
+        if x in test.keys():
+            test[x] += 1
+
+    
+    #divide the c with 2
+    test['c'] = int(test['c']/2)
+    list_val =[]
+    for x in test.values():
+        list_val.append(x)
+    
+    print(test)
+    return (max(list_val))
+    
+rs =  countStickers("ciscooo")
+print("Buy {} stickers".format(rs))
